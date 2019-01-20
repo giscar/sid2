@@ -202,6 +202,16 @@ public class MenuController implements Serializable {
             RegistroController registroController = (RegistroController) context.getELContext().getELResolver().getValue(context.getELContext(), null, "registroController");
             return registroController.cargarNuevaBusqueda();
         }
+        
+        if (codigoPagina == 38) {
+            AtencionController atencionController = (AtencionController) context.getELContext().getELResolver().getValue(context.getELContext(), null, "atencionController");
+            return atencionController.atenderTicket();
+        }
+        
+        if (codigoPagina == 39) {
+            AtencionController atencionController = (AtencionController) context.getELContext().getELResolver().getValue(context.getELContext(), null, "atencionController");
+            return atencionController.cargarUsuarioVentanilla();
+        }
 
         if (codigoPagina == 32) {
             menuHijo = menuService.menuHijo(8);
